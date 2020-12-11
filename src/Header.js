@@ -3,7 +3,7 @@ import React from 'react';
 
 // Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './AstOutput.css'
+import './Header.css'
 
 class Header extends React.Component {
     constructor(props) {
@@ -15,11 +15,13 @@ class Header extends React.Component {
     }
 
     render() {
-        return (<div className="header__container">
-            <div className="header__title">
-                {this.state.title}
+        return (
+            <div className="header__container d-flex">
+                <div className="header__title">
+                    {this.state.title}
+                </div>
             </div>
-        </div>);
+        );
     }
 }
 

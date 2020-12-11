@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import 'roboto-fontface/css/roboto-slab/roboto-slab-fontface.css'
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

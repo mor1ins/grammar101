@@ -4,15 +4,8 @@
     padding: 4px;
 }
 
-.ast_output__close_button:focus,
-.ast_output__close_button:active,
-.ast_output__close_button:hover,
-.ast_output__close_button {
-    /*background-color: #919191;*/
-}
-
 .ast_output__view,
-.ast_output__close_button{
+.ast_output__close_button {
     resize: none;
     outline:0 !important;
     -webkit-appearance:none;
@@ -20,13 +13,18 @@
     border: none !important;
 }
 
-.ast_output__view {
-    width: 500px
-}
-
 .ast_output__container {
     display: flex;
+    flex-direction: row;
     margin: 0;
     padding: 0;
-    width: min-content;
+    width: 100%;
 }
+
+/*.ast_output__card {*/
+/*    display: flex;*/
+/*}*/
+
+/*.ast_output__accordion {*/
+/*    width: 100%;*/
+/*}*/
