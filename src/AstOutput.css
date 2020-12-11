@@ -1,0 +1,32 @@
+.ast_output__close_button {
+    /*background-color: #919191;*/
+    font-size: 16px;
+    padding: 4px;
+}
+
+.ast_output__close_button:focus,
+.ast_output__close_button:active,
+.ast_output__close_button:hover,
+.ast_output__close_button {
+    /*background-color: #919191;*/
+}
+
+.ast_output__view,
+.ast_output__close_button{
+    resize: none;
+    outline:0 !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.ast_output__view {
+    width: 500px
+}
+
+.ast_output__container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: min-content;
+}

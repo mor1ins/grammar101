@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+html, body, #root, .App {
+  height: 100%
+}
+
+.container__forms {
+  display: flex;
+  padding: 16px;
+  height: 100%;
+  /*border: 1px solid black;*/
+}
+
+.forms__grammar_input {
+  resize: none;
+}
+
+.forms__text_input {
+  margin: 0 16px;
+  resize: none;
+}
+
+
+
