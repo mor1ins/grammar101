@@ -11,3 +11,10 @@
     resize: none;
     height: 100% !important;
 }
+
+.forms__grammar_input {
+    outline: 0 !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+    resize: none;
+}

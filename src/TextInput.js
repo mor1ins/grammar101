@@ -1,10 +1,9 @@
-import './App.css';
 import React from 'react';
 import {Form} from "react-bootstrap";
 
 // Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import './TextInput.css'
 
 class TextInput extends React.Component {
     render() {
