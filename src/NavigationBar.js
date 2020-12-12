@@ -9,7 +9,9 @@ class NavigationBar extends React.Component {
     render() {
         return (
             <Navbar className="navbar__container" bg="light">
-                <Navbar.Brand href="#home">grammar101</Navbar.Brand>
+                <Navbar.Brand href="#home" onClick={() => window.location.reload(false)}>
+                    grammar101
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
