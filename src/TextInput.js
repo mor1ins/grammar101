@@ -39,22 +39,21 @@ class TextInput extends React.Component {
 
     render() {
         const update = debounce(event => this.updateText(event), 1000);
-        let color = "#ced4da";
+        let color = '';
         if (this.state.status && this.state.isInitializedStatus) {
-            color = "green"
+            color = "success"
         } else if (this.state.isInitializedStatus) {
-            color = "red"
+            color = "fail"
         }
 
         return (
             <Form.Control
                 as="textarea"
-                style={{border: `1px solid ${color}`}}
-                className="forms__text_input"
+                placeholder="insert your test string here"
+                className={`forms__text_input ${color}`}
                 onChange={update}/>
         );
     }
-
 }
 
 

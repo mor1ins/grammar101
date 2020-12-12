@@ -17,4 +17,17 @@
     -webkit-appearance: none;
     box-shadow: none !important;
     resize: none;
+    border-color: #ced4da;
+}
+
+.forms__grammar_input:focus {
+    border-color: #ced4da;
+}
+
+.forms__grammar_input.success {
+    border-color: green;
+}
+
+.forms__grammar_input.fail {
+    border-color: red;
 }

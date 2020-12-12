@@ -12,5 +12,4 @@ const debounce = (func, wait) => {
     };
 };
 
-
 export default debounce;

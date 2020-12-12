@@ -1,10 +1,17 @@
 import './App.css';
 import React from 'react';
-import {Form} from "react-bootstrap";
+import JSONViewer from 'react-json-viewer';
 
-// Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './AstOutput.css'
+
+
+// function stringifyTree(tree) {
+//     if ((typeof tree) === '')
+//     const keys = Object.keys(tree);
+//     return "\n".join(keys.map(key => ));
+// }
+
 
 
 class AstOutput extends React.Component {
@@ -18,19 +25,26 @@ class AstOutput extends React.Component {
     updateAst(ast) {
         this.setState({
             ...this.state,
-            ast: ast,
+            ast: this.astToString(ast),
         });
     }
 
+    astToString(ast) {
+        if (!ast || ast === '')
+            return '';
+
+        return JSON.parse(JSON.stringify(ast._cst, null, 2));
+    }
+
     render() {
-        const json = this.state.ast ? JSON.stringify(this.state.ast._cst, null, 2) : '';
+        // const json = this.astToString();
         return (
-            <Form.Control
-                as="textarea"
-                className="ast_output__view"
-                readOnly={true}
-                value={json}
-            />
+            <JSONViewer json={this.state.ast} />
+            // <Form.Control
+            //     as="textarea"
+            //     className="ast_output__view"
+            //     readOnly={true}
+            //     value={json} />
         );
     }
 }

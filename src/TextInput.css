@@ -3,4 +3,17 @@
     -webkit-appearance: none;
     box-shadow: none !important;
     resize: none;
+    border-color: #ced4da;
+}
+
+.forms__text_input:focus {
+    border-color: #ced4da;
+}
+
+.forms__text_input.success {
+    border-color: green;
+}
+
+.forms__text_input.fail {
+    border-color: red;
 }
