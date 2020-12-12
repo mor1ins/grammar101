@@ -4,3 +4,7 @@
     color: #FEFCFC;
     font-size: 24px;
 }
+.header__title:hover{
+cursor: pointer;
+}
+
