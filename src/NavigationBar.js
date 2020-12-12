@@ -17,8 +17,9 @@ class NavigationBar extends React.Component {
                     <Nav className="mr-auto">
                         {/*<Nav.Link href="/">Home</Nav.Link>*/}
                         <Nav.Link href="https://github.com/mor1ins/grammar101">Source</Nav.Link>
-                        {/*TODO: вставь ссылку на хороший тутор по грамматикам*/}
-                        <Nav.Link href="#link">What are grammars?</Nav.Link>
+                        <Nav.Link href="https://nextjournal.com/dubroy/ohm-parsing-made-easy">
+                            What are grammars?
+                        </Nav.Link>
                     </Nav>
                     {/*<Form inline>*/}
                     {/*    <FormControl type="text" placeholder="Search" className="mr-sm-2" />*/}
