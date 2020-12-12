@@ -8,7 +8,6 @@ import './GrammarInput.css'
 
 const ohm = require('ohm-js');
 
-
 class GrammarInput extends React.Component {
     constructor(props) {
         super(props);
