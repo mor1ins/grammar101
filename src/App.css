@@ -45,10 +45,20 @@ html, body, #root, .App {
 
 
 .container__forms {
-  padding: 8px;
+  padding: 24px 8px 0;
   height: 90%;
 }
 
 .tab-content, .tab-content>div, .tab-content>div>textarea {
   height: 100%;
+}
+
+.nav-item.nav-link {
+  padding-top: 0;
+  color: #6c757d !important;
+}
+
+.nav-item.nav-link.active {
+  background: none !important;
+  font-weight: bold;
 }

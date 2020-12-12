@@ -7,10 +7,12 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
     "bootstrap": "^4.5.3",
+    "d3": "^6.3.1",
     "ohm-js": "^15.3.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
+    "react-json-viewer": "^2.1.0",
     "react-scripts": "4.0.1",
     "roboto-fontface": "^0.10.0",
     "web-vitals": "^0.2.4"

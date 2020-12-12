@@ -3,12 +3,10 @@ import {Container, Tab, Tabs} from "react-bootstrap";
 
 import Header from "./Header";
 import GrammarInput from "./GrammarInput";
-// import InterfaceTabs from "./InterfaceTabs";
 import TextInput from "./TextInput";
 import AstOutput from "./AstOutput";
 
 
-// Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -66,17 +64,16 @@ class App extends React.Component {
                 <div className="container__forms d-flex align-items-stretch">
                     <GrammarInput update={parser => this.updateParser(parser)}/>
                     <Container className="d-flex flex-column align-items-stretch">
-                        <Tabs variant="pills" defaultActiveKey="input" className="d-flex flex-row align-items-stretch">
+                        <Tabs bg="light" variant="pills" defaultActiveKey="input" className="d-flex flex-row align-items-stretch">
                             <Tab eventKey="input" title="Input">
                                 <TextInput
                                     ref={this.input}
-                                    update={input => this.updateText(input)}
-                                />
+                                    update={input => this.updateText(input)} />
                             </Tab>
-                            <Tab eventKey="results" title="Results">
+                            <Tab eventKey="results" title="AST">
                                 <AstOutput
                                     ref={this.output}
-                                    ast={this.state.output}/>
+                                    ast={this.state.output} />
                             </Tab>
                         </Tabs>
                     </Container>
