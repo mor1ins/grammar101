@@ -8,9 +8,27 @@ import './AstOutput.css'
 
 
 class AstOutput extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            ast: props.ast || '',
+        };
+    }
+
+    updateAst(ast) {
+        this.setState({
+            ...this.state,
+            ast: ast,
+        });
+    }
+
     render() {
         return (
-            <Form.Control  className="ast_output__view" as="textarea" readOnly={true} />
+            <Form.Control
+                as="textarea"
+                className="ast_output__view"
+                readOnly={true}
+                value={ JSON.stringify(this.state.ast._cst, null, 2) || '' } />
         );
     }
 }
