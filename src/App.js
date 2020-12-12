@@ -13,12 +13,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 
-class App extends React.Component{
+class App extends React.Component {
     constructor(props) {
         super(props);
 
         this.output = React.createRef();
-        // this.tabs = React.createRef();
+        this.input = React.createRef();
 
         this.state = {
             input: null,
@@ -47,42 +47,36 @@ class App extends React.Component{
     parse() {
         let ast = null;
         if (this.state.parser && this.state.input) {
-            console.log(this.state);
             ast = this.state.parser.match(this.state.input);
+            this.input.current.updateInputStatus(ast.succeeded());
 
-            if (ast.succeeded()) {
-                console.log('AST');
-                console.log(ast._cst);
-            } else {
-                console.log('Bad input!')
-            }
         }
 
         this.setState({
             ...this.state,
             output: ast,
         });
-
         this.output.current.updateAst(this.state.output);
     }
 
     render() {
         return (
             <div className="App">
-                <Header title="grammar101" />
+                <Header title="grammar101"/>
                 <div className="container__forms d-flex align-items-stretch">
-                    <GrammarInput
-                        update={parser => this.updateParser(parser)} />
+                    <GrammarInput update={parser => this.updateParser(parser)}/>
                     <Container className="d-flex flex-column align-items-stretch">
                         <Tabs variant="pills" defaultActiveKey="input" className="d-flex flex-row align-items-stretch">
                             <Tab eventKey="input" title="Input">
                                 <TextInput
-                                    update={input => this.updateText(input)} />
+                                    ref={this.input}
+                                    update={input => this.updateText(input)}
+                                />
                             </Tab>
                             <Tab eventKey="results" title="Results">
                                 <AstOutput
                                     ref={this.output}
-                                    ast={this.state.output} />
+                                    ast={this.state.output}/>
                             </Tab>
                         </Tabs>
                     </Container>
