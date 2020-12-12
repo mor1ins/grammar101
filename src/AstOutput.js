@@ -37,15 +37,9 @@ class AstOutput extends React.Component {
     }
 
     render() {
-        // const json = this.astToString();
-        return (
-            <JSONViewer json={this.state.ast} />
-            // <Form.Control
-            //     as="textarea"
-            //     className="ast_output__view"
-            //     readOnly={true}
-            //     value={json} />
-        );
+        return (this.state.ast !== '')
+            ? <JSONViewer json={this.state.ast} />
+            : <></>;
     }
 }
 
