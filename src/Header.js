@@ -13,11 +13,12 @@ class Header extends React.Component {
             title: props.title,
         };
     }
+    
 
     render() {
         return (
             <div className="header__container d-flex">
-                <div className="header__title">
+                <div className="header__title" onClick={() => window.location.reload(false)}>
                     {this.state.title}
                 </div>
             </div>
