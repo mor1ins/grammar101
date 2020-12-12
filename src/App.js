@@ -11,7 +11,6 @@ import AstOutput from "./AstOutput";
 // Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import './InterfaceTabs.css'
 
 
 class App extends React.Component{

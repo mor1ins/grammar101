@@ -48,3 +48,7 @@ html, body, #root, .App {
   padding: 8px;
   height: 90%;
 }
+
+.tab-content, .tab-content>div, .tab-content>div>textarea {
+  height: 100%;
+}

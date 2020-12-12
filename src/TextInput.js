@@ -20,11 +20,6 @@ class TextInput extends React.Component {
 
     updateText(event) {
         console.log('update text');
-
-        // this.setState({
-        //     text: event.target.value,
-        // });
-
         this.update(event.target.value);
     }
 

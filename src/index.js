@@ -1,10 +1,11 @@
+import './logo.svg'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import 'roboto-fontface/css/roboto-slab/roboto-slab-fontface.css'
+import './index.css';
 
 
 ReactDOM.render(

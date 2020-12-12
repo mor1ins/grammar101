@@ -23,12 +23,16 @@ class AstOutput extends React.Component {
     }
 
     render() {
+        const json = this.state.ast
+            ? JSON.stringify(this.state.ast._cst , null, 2)
+            : '';
+
         return (
             <Form.Control
                 as="textarea"
                 className="ast_output__view"
                 readOnly={true}
-                value={ JSON.stringify(this.state.ast._cst, null, 2) || '' } />
+                value={json} />
         );
     }
 }
